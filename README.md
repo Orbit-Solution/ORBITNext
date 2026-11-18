@@ -1,46 +1,53 @@
 <div align="center">
-  <img src="docs/public/orbitnext-docker.png" alt="OrbitNext Docker" width="80" />
+  <a href="https://www.orbitsolution.site/">
+    <img src="https://www.orbitsolution.site/logo.png" alt="OrbitNext Logo" width="120" />
+  </a>
   <h1>OrbitNext Docker</h1>
-  <p>Docker images and orchestration for <a href="https://www.orbitsolution.site/">OrbitNext</a> applications by Orbit Solution.</p>
+  <h3>Enterprise-Grade Container Orchestration for the OrbitNext Ecosystem</h3>
   <p>
-    <a href="https://github.com/orbitsolution/orbitnext_docker/actions/workflows/core-build-stable.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/orbitsolution/orbitnext_docker/core-build-stable.yml?branch=main&label=Build%20Stable" alt="Build Stable" />
-    </a>
-    <a href="https://github.com/orbitsolution/orbitnext_docker/actions/workflows/core-build-develop.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/orbitsolution/orbitnext_docker/core-build-develop.yml?branch=main&label=Build%20Develop" alt="Build Develop" />
-    </a>
+    Deploy, scale, and manage your entire business suite—ERP, CRM, Helpdesk, and custom enterprise modules—in minutes with production-ready Docker configurations powered by <a href="https://www.orbitsolution.site/">Orbit Solution</a>.
+  </p>
+  <p>
     <a href="https://www.orbitsolution.site/">
-      <img src="https://img.shields.io/badge/Website-Orbit%20Solution-0A7EA4" alt="Orbit Solution" />
+      <img src="https://img.shields.io/badge/Official_Website-Orbit_Solution-0A7EA4?style=for-the-badge" alt="Orbit Solution Website" />
     </a>
     <a href="docs/">
-      <img src="https://img.shields.io/badge/Docs-Open%20Docs-0A7EA4" alt="Docs" />
+      <img src="https://img.shields.io/badge/Documentation-Read_Docs-1E293B?style=for-the-badge" alt="Documentation" />
+    </a>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge" alt="MIT License" />
     </a>
   </p>
 </div>
 
-## What is this?
+---
 
-This repository is the official container setup for **OrbitNext**, developed and maintained by [Orbit Solution](https://www.orbitsolution.site/).
+## Why OrbitNext Docker?
 
-It provides Docker images, Compose configurations, and documentation for running OrbitNext applications—including OrbitNext ERP, CRM, Helpdesk, and custom enterprise modules—in containers.
+Modern enterprises need infrastructure that moves as fast as their operations. **OrbitNext Docker** eliminates complex server setups and dependency headaches, giving your team a standardized, cloud-native foundation from local evaluation to global production.
 
-Use it if you want to:
+* **⚡ Zero-to-Live in Minutes:** Spin up a full-featured OrbitNext environment locally with a single command.
+* **🏢 Built for Scale:** Production-hardened Docker Compose architectures designed for high availability, automated backups, and seamless updates.
+* **🧩 All-in-One Business Suite:** Run OrbitNext ERP, CRM, Helpdesk, and custom vertical applications side-by-side in isolated, secure containers.
+* **🛠️ Custom App Ready:** Easily package your proprietary OrbitNext extensions into immutable, version-controlled Docker images.
 
-- run OrbitNext ERP, CRM, Helpdesk, or custom modules with Docker
-- start from a quick local demo setup
-- use production-ready Docker images and Compose configurations
-- build custom OrbitNext application images
-- deploy and operate OrbitNext in production
+---
 
-## Repository Structure
+## Launch a Live Demo in 60 Seconds
+
+Experience the full power of OrbitNext on your local machine using our quick-start evaluation setup (`pwd.yml`).
+
+> **Note:** The demo configuration is built for rapid evaluation and testing. For persistent, high-traffic deployments, use our production setup in `compose.yaml`.
+
+### Prerequisites
+Ensure you have [Docker](https://docs.docker.com/get-docker/), [Docker Compose v2](https://docs.docker.com/compose/), and [Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) installed.
+
+### Quick Start
 
 ```bash
-orbitnext_docker/
-├── docs/                 # Complete deployment and operational documentation
-├── overrides/            # Docker Compose configurations for different scenarios
-├── compose.yaml          # Base Compose file for production setups
-├── pwd.yml               # Single Compose file for quick disposable demo
-├── images/               # Dockerfiles for building OrbitNext images
-├── development/          # Development environment configurations
-├── devcontainer-example/ # VS Code devcontainer setup
-└── resources/            # Helper scripts and configuration templates
+# 1. Clone the official repository
+git clone [https://github.com/orbitsolution/orbitnext_docker](https://github.com/orbitsolution/orbitnext_docker)
+cd orbitnext_docker
+
+# 2. Launch the OrbitNext stack
+docker compose -f pwd.yml up -d
