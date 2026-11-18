@@ -1,53 +1,88 @@
-<div align="center">
-  <a href="https://www.orbitsolution.site/">
-    <img src="https://www.orbitsolution.site/logo.png" alt="OrbitNext Logo" width="120" />
-  </a>
-  <h1>OrbitNext Docker</h1>
-  <h3>Enterprise-Grade Container Orchestration for the OrbitNext Ecosystem</h3>
-  <p>
-    Deploy, scale, and manage your entire business suite—ERP, CRM, Helpdesk, and custom enterprise modules—in minutes with production-ready Docker configurations powered by <a href="https://www.orbitsolution.site/">Orbit Solution</a>.
-  </p>
-  <p>
-    <a href="https://www.orbitsolution.site/">
-      <img src="https://img.shields.io/badge/Official_Website-Orbit_Solution-0A7EA4?style=for-the-badge" alt="Orbit Solution Website" />
-    </a>
-    <a href="docs/">
-      <img src="https://img.shields.io/badge/Documentation-Read_Docs-1E293B?style=for-the-badge" alt="Documentation" />
-    </a>
-    <a href="LICENSE">
-      <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge" alt="MIT License" />
-    </a>
-  </p>
-</div>
+# ORBITNext ERP — Custom Cloud ERP & AI-Powered Operations Platform
+
+**ORBITNext ERP** by [Orbit Solution](https://www.orbitsolution.site/) is a modular, cloud-native Enterprise Resource Planning (ERP) platform engineered to replace disconnected spreadsheets, legacy software, and repetitive manual workflows with a single real-time system of record.
+
+Built for growing SMBs and mid-market enterprises across **Australia**, **Sri Lanka**, and global markets, ORBITNext ERP unifies **inventory management, cloud POS, financial reporting, CRM, HR, and autonomous AI workflows**—backed by **100% code and IP ownership**.
+
+🌐 **Website:** [https://www.orbitsolution.site/](https://www.orbitsolution.site/)  
+📞 **Australia (Perth, WA):** +61 402 588 926  
+📞 **Sri Lanka (Mount Lavinia):** +94 72 985 5168  
+✉️ **Contact:** info@orbitsolution.site
 
 ---
 
-## Why OrbitNext Docker?
+## Why Choose ORBITNext ERP?
 
-Modern enterprises need infrastructure that moves as fast as their operations. **OrbitNext Docker** eliminates complex server setups and dependency headaches, giving your team a standardized, cloud-native foundation from local evaluation to global production.
+Traditional off-the-shelf ERPs force your business into rigid templates and escalating per-seat licensing fees. ORBITNext ERP is tailored to your exact operational logic:
 
-* **⚡ Zero-to-Live in Minutes:** Spin up a full-featured OrbitNext environment locally with a single command.
-* **🏢 Built for Scale:** Production-hardened Docker Compose architectures designed for high availability, automated backups, and seamless updates.
-* **🧩 All-in-One Business Suite:** Run OrbitNext ERP, CRM, Helpdesk, and custom vertical applications side-by-side in isolated, secure containers.
-* **🛠️ Custom App Ready:** Easily package your proprietary OrbitNext extensions into immutable, version-controlled Docker images.
+* **100% Code & IP Ownership:** Full intellectual property transfer upon launch with zero vendor lock-in.
+* **AI-Native Automation:** Built-in document OCR, automated invoice processing (99.8% extraction accuracy), and RAG-powered internal knowledge assistants.
+* **Unified Multi-System Sync:** Real-time, two-way synchronization across POS counters, e-commerce storefronts, accounting tools, and WhatsApp Business API.
+* **Rapid Sprint Deployment:** Production-ready rollouts delivered in structured **2–4 week engineering sprints** with 99.8% uptime reliability and 24/7 SLA support.
 
 ---
 
-## Launch a Live Demo in 60 Seconds
+## Core ERP Modules
 
-Experience the full power of OrbitNext on your local machine using our quick-start evaluation setup (`pwd.yml`).
+| Module | Key Capabilities |
+| :--- | :--- |
+| **Inventory & Warehouse Management** | Multi-outlet real-time stock tracking, automated reorder alerts, batch/serial tracking, and supplier procurement workflows. |
+| **Omnichannel Cloud POS** | High-speed in-store point-of-sale synced live with online e-commerce stores (Shopify & custom storefronts). |
+| **Automated Finance & Invoicing** | Automated billing, OCR receipt/invoice parsing, tax/GST compliance reporting, and live P&L executive dashboards. |
+| **CRM & Sales Pipeline** | Centralized lead management, quote generation, customer order history, and automated follow-ups (pairs with **Orbit CRM**). |
+| **WhatsApp & Conversational Ops** | Automated order notifications, abandoned cart recovery, and 24/7 AI customer support via **Orbit WhatsApp Bot**. |
+| **HR & Workforce Management** | Role-based access control (RBAC), attendance, payroll workflows, and staff onboarding (integrates with **Orbit HR Suite**). |
+| **Executive BI & Analytics** | Single-pane operational visibility tracking revenue velocity, fulfillment SLAs, and margins via **Orbit Insights**. |
 
-> **Note:** The demo configuration is built for rapid evaluation and testing. For persistent, high-traffic deployments, use our production setup in `compose.yaml`.
+---
 
-### Prerequisites
-Ensure you have [Docker](https://docs.docker.com/get-docker/), [Docker Compose v2](https://docs.docker.com/compose/), and [Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) installed.
+## Industries Served
 
-### Quick Start
+* **Retail & E-Commerce:** Omnichannel POS, live multi-location inventory sync, and automated supplier restocking.
+* **Healthcare & Clinics:** Patient scheduling, billing automation, inventory control for medical supplies, and compliance-ready records.
+* **Tourism & Hospitality:** Booking orchestration, automated guest messaging on WhatsApp, and multi-property expense tracking.
+* **Construction & Real Estate:** Project cost tracking, subcontractor procurement, milestone invoicing, and document management.
+* **Professional Services:** Client portals, automated timesheets, recurring invoicing, and AI knowledge retrieval across SOPs.
 
-```bash
-# 1. Clone the official repository
-git clone [https://github.com/orbitsolution/orbitnext_docker](https://github.com/orbitsolution/orbitnext_docker)
-cd orbitnext_docker
+---
 
-# 2. Launch the OrbitNext stack
-docker compose -f pwd.yml up -d
+## Architecture & Integrations
+
+ORBITNext ERP is built on a modern, scalable, low-latency stack with clean REST and GraphQL APIs:
+
+* **Frontend & Web:** React, Next.js (Core Web Vitals & SEO-optimized)
+* **Backend & Database:** Node.js, Python, PostgreSQL, Supabase
+* **AI & Automation:** OpenAI, Anthropic Claude, Custom RAG Vector Pipelines, Document OCR
+* **Native Connectors:** WhatsApp Business API, Stripe, Shopify, HubSpot, Google Workspace, Zapier, Meta Business
+
+---
+
+## Implementation Roadmap
+
+1. **Discovery & Workflow Audit:** Map existing bottlenecks, data schemas, and high-ROI automation opportunities.
+2. **Architecture & Fixed-Scope Blueprint:** Deliver technical specifications, database architecture, and transparent milestone pricing.
+3. **Agile Engineering & Integration:** Modular development and bi-directional API integration with your existing toolstack.
+4. **QA Testing & Team Onboarding:** Automated security testing, role-based permissions setup, and hands-on staff training.
+5. **Zero-Downtime Launch & 24/7 SLA:** Production deployment with continuous monitoring and dedicated engineering support.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### Can ORBITNext ERP integrate with our existing accounting and e-commerce software?
+Yes. ORBITNext ERP connects seamlessly with platforms like Shopify, Stripe, HubSpot, Google Workspace, and cloud accounting systems via custom REST/GraphQL APIs and webhooks.
+
+### Do we pay recurring per-user license fees?
+No. Orbit Solution delivers custom ERP implementations on a deterministic, fixed-scope project model with **100% code and IP ownership** transferred to your business upon launch.
+
+### How fast can ORBITNext ERP go live?
+Core MVP modules and workflow automations deploy in **14 days**, while full-scale custom enterprise ERP rollouts typically launch within **3–4 weeks**.
+
+---
+
+## Get Started
+
+Ready to eliminate manual data entry and unify your operations?
+
+👉 **[Book a Free 30-Minute Strategy Blueprint Call](https://www.orbitsolution.site/)**  
+📧 **Email:** info@orbitsolution.site
