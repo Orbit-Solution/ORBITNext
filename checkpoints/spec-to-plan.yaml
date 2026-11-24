@@ -1,0 +1,16 @@
+requirements:
+  - id: REQ-001
+    description: Rebrand the application as OrbitERPNext
+    plan_items: ["2.1", "3.2", "3.4", "5.7"]
+  - id: REQ-002
+    description: Replace the logo and favicon
+    plan_items: ["1.1", "2.1", "3.4", "5.7"]
+  - id: REQ-003
+    description: Provide a dark theme for the desk and public website
+    plan_items: ["1.1", "2.1", "3.5", "5.7"]
+  - id: REQ-004
+    description: Deploy the changes using the current Docker setup
+    plan_items: ["4.3", "4.4", "4.6"]
+  - id: REQ-005
+    description: Preserve behavior and verify the resulting deployment
+    plan_items: ["3.5", "4.6", "5.7"]
