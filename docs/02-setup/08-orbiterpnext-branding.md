@@ -10,6 +10,7 @@ It provides:
 - Idempotent `after_migrate` site branding configuration
 
 Branding values are applied only when the corresponding Frappe fields exist.
+
 # OrbitERPNext Branding Deployment
 
 The repository includes a local `orbiterpnext_branding` Frappe app. It adds:

@@ -46,7 +46,9 @@
 
   /* ── 4. Navbar brand injection ──────────────────────────────── */
   function injectNavbarBrand() {
-    var brand = document.querySelector(".navbar-brand, .navbar .brand, .desk-brand, .site-name");
+    var brand = document.querySelector(
+      ".navbar-brand, .navbar .brand, .desk-brand, .site-name",
+    );
     if (!brand) return;
 
     /* Only inject if no Orbit branding already present */
@@ -60,7 +62,7 @@
       existingImg.src = logoUrl;
       existingImg.alt = "OrbitERPNext";
       existingImg.style.height = "28px";
-      existingImg.style.width  = "auto";
+      existingImg.style.width = "auto";
     }
 
     /* Wordmark text span, hidden when logo is present */
@@ -75,10 +77,10 @@
       "display: inline-flex",
       "align-items: center",
       "gap: 2px",
-      existingImg ? "display:none" : ""
+      existingImg ? "display:none" : "",
     ].join(";");
     wordmark.innerHTML =
-      "Orbit<span style=\"color:#32d7fe;margin-left:2px\">ERP</span>Next";
+      'Orbit<span style="color:#32d7fe;margin-left:2px">ERP</span>Next';
 
     brand.appendChild(wordmark);
   }
@@ -111,12 +113,12 @@
       "text-transform: uppercase",
       "font-family: 'Poppins', system-ui, sans-serif",
       "cursor: default",
-      "user-select: none"
+      "user-select: none",
     ].join(";");
     badge.innerHTML =
-      "<span style=\"width:6px;height:6px;border-radius:50%;" +
+      '<span style="width:6px;height:6px;border-radius:50%;' +
       "background:rgba(25,85,253,0.9);display:inline-block;" +
-      "box-shadow:0 0 6px 2px rgba(25,85,253,0.5)\"></span>" +
+      'box-shadow:0 0 6px 2px rgba(25,85,253,0.5)"></span>' +
       "Orbit Solution";
 
     /* Make sidebar relative so badge absolute-positioning works */

@@ -13,4 +13,3 @@ RUN mkdir -p sites/assets && \
     ln -sfnT \
     /home/frappe/frappe-bench/apps/orbiterpnext_branding/orbiterpnext_branding/public \
     sites/assets/orbiterpnext_branding
-

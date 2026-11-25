@@ -1,15 +1,15 @@
 import frappe
 
-LOGO    = "/assets/orbiterpnext_branding/images/orbiterpnext-logo.svg"
+LOGO = "/assets/orbiterpnext_branding/images/orbiterpnext-logo.svg"
 FAVICON = "/assets/orbiterpnext_branding/images/orbiterpnext-favicon.svg"
 BRAND_HTML = (
     '<span style="font-family:Poppins,system-ui,sans-serif;font-weight:700;'
-    'letter-spacing:-0.025em;color:#ffffff;display:inline-flex;'
+    "letter-spacing:-0.025em;color:#ffffff;display:inline-flex;"
     'align-items:center;gap:4px">'
-    'Orbit'
+    "Orbit"
     '<span style="color:#32d7fe">ERP</span>'
-    'Next'
-    '</span>'
+    "Next"
+    "</span>"
 )
 THEME_NAME = "Orbit Dark"
 
@@ -27,6 +27,7 @@ def set_branding():
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────
+
 
 def _apply_website_theme():
     """Create or update the 'Orbit Dark' Website Theme."""
@@ -48,20 +49,22 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 """
         fields = {
-            "primary_color":         "#1955fd",
-            "background_color":      "#04060e",
-            "text_color":            "#c8c8d4",
-            "dark_color":            "#0b0e1a",
-            "light_color":           "#0f1320",
-            "google_font":           "Inter",
-            "font_size":             "15px",
+            "primary_color": "#1955fd",
+            "background_color": "#04060e",
+            "text_color": "#c8c8d4",
+            "dark_color": "#0b0e1a",
+            "light_color": "#0f1320",
+            "google_font": "Inter",
+            "font_size": "15px",
             "button_rounded_corners": 1,
-            "button_shadows":        0,
-            "custom_scss":           custom_scss,
+            "button_shadows": 0,
+            "custom_scss": custom_scss,
         }
 
         if not frappe.db.exists("Website Theme", THEME_NAME):
-            doc = frappe.get_doc({"doctype": "Website Theme", "theme": THEME_NAME, "custom": 1, **fields})
+            doc = frappe.get_doc(
+                {"doctype": "Website Theme", "theme": THEME_NAME, "custom": 1, **fields}
+            )
             doc.insert(ignore_permissions=True)
         else:
             doc = frappe.get_doc("Website Theme", THEME_NAME)
@@ -87,13 +90,13 @@ def _apply_website_settings():
     """Set logo, favicon, theme, and footer branding."""
     try:
         ws = frappe.get_single("Website Settings")
-        ws.app_name     = "OrbitERPNext"
-        ws.app_logo     = LOGO
-        ws.favicon      = FAVICON
+        ws.app_name = "OrbitERPNext"
+        ws.app_logo = LOGO
+        ws.favicon = FAVICON
         ws.splash_image = LOGO
-        ws.brand_html   = BRAND_HTML
-        ws.copyright    = "© Orbit Solution"
-        ws.footer_items = []   # clear default footer links if any
+        ws.brand_html = BRAND_HTML
+        ws.copyright = "© Orbit Solution"
+        ws.footer_items = []  # clear default footer links if any
 
         if frappe.db.exists("Website Theme", THEME_NAME):
             ws.website_theme = THEME_NAME

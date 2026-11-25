@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="orbiterpnext_branding",
@@ -11,4 +11,3 @@ setup(
     include_package_data=True,
     install_requires=[],
 )
-

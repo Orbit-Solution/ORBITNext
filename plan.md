@@ -34,36 +34,43 @@ Create a version-controlled branding layer for the existing Frappe/ERPNext Docke
 ## Implementation Steps
 
 ### Step 1: [Cross-cutting] Confirm branding inputs and deployment target
+
 - **Requirements**: REQ-001, REQ-002, REQ-003
 - **Design inputs**: Existing Frappe Docker image and persistent-site model
 - **Description**: Confirm the OrbitERPNext display name, approved logo and favicon files, logo dimensions/formats, brand colors, dark-theme contrast requirements, target Frappe/ERPNext version, site hostname, and whether the dark theme applies to the desk, public website, or both. Default plan assumption: global desk dark theme plus a matching dark public Website Theme.
 
 ### Step 2: [Cross-cutting] Create the OrbitERPNext branding app
+
 - **Requirements**: REQ-001, REQ-002, REQ-003
 - **Design inputs**: Frappe custom app structure and current asset handling
 - **Description**: Create a companion custom Frappe app named `orbiterpnext_branding` with app metadata, public logo/favicon assets, CSS variables, dark-theme styles, and hooks or fixtures for applying branding settings. Use supported Frappe extension points and avoid replacing core files. Include accessible color contrast, responsive logo variants, and a fallback when an asset is unavailable.
 
 ### Step 3: [Cross-cutting] Integrate the app into the custom image build
+
 - **Requirements**: REQ-001, REQ-002, REQ-003, REQ-004
 - **Design inputs**: [docs/02-setup/02-build-setup.md](docs/02-setup/02-build-setup.md), [images/custom/Containerfile](images/custom/Containerfile), [images/layered/Containerfile](images/layered/Containerfile)
 - **Description**: Add the branding app repository and branch to the deployment `apps.json`, build a tagged custom image, verify assets are compiled, and ensure the image uses the existing startup entrypoint and immutable asset layout. Keep repository credentials in BuildKit secrets and never in image build arguments.
 
 ### Step 4: [Cross-cutting] Apply site-level OrbitERPNext settings
+
 - **Requirements**: REQ-001, REQ-002
 - **Design inputs**: Existing site administration and persistent `sites` volume
 - **Description**: Run the app installation/migration and configure the site name, app title, desk logo, website logo, favicon, and any allowed email/print branding settings. Ensure settings are applied idempotently and do not overwrite unrelated customer site configuration.
 
 ### Step 5: [Cross-cutting] Enable and verify dark theme behavior
+
 - **Requirements**: REQ-003, REQ-005
 - **Design inputs**: Frappe desk theme preferences and Website Theme behavior
 - **Description**: Apply the global desk theme behavior supported by the selected Frappe version and configure the public Website Theme. Verify navigation, forms, dialogs, tables, reports, charts, notifications, login, print preview, and mobile layouts for contrast, readability, and missing asset references.
 
 ### Step 6: [Cross-cutting] Document deployment and rollback
+
 - **Requirements**: REQ-004, REQ-005
 - **Design inputs**: [docs/02-setup/02-build-setup.md](docs/02-setup/02-build-setup.md), [docs/13-explanation/03-asset-handling.md](docs/13-explanation/03-asset-handling.md)
 - **Description**: Add an OrbitERPNext deployment guide covering required app repository inputs, image build, Compose generation, migration, rollout, cache invalidation, backup expectations, and rollback to the previous image tag. Document the distinction between runtime site settings and image-managed assets.
 
 ### Step 7: [Cross-cutting] Validate the branded deployment
+
 - **Requirements**: REQ-001, REQ-002, REQ-003, REQ-004, REQ-005
 - **Design inputs**: Existing repository tests and deployment commands
 - **Description**: Validate Compose configuration, build the image, start a disposable environment, install/migrate the branding app, exercise login and desk/public-site flows, verify logo/favicon requests return successful responses, inspect browser console errors, confirm data survives recreation, and verify rollback to the prior image.
@@ -146,10 +153,10 @@ orbiterpnext_branding/                     # Companion custom Frappe app reposit
 
 ## Requirement Mapping
 
-| REQ ID | Description | Plan Items | Implementation Evidence |
-|--------|-------------|------------|------------------------|
-| REQ-001 | Rebrand the application as OrbitERPNext | 2.1, 3.2, 3.4, 5.7 | Branding app metadata, idempotent site settings, admin/desk verification |
-| REQ-002 | Replace the logo and favicon | 1.1, 2.1, 3.4, 5.7 | `public/images/` assets, configured logo fields, HTTP asset checks |
-| REQ-003 | Provide a dark theme for the desk and public website | 1.1, 2.1, 3.5, 5.7 | Dark CSS, Website Theme, browser contrast and flow checks |
-| REQ-004 | Deploy the changes using the current Docker setup | 4.3, 4.4, 4.6 | `apps.json`, custom image, Compose deployment and rollback guide |
-| REQ-005 | Preserve behavior and verify the resulting deployment | 3.5, 4.6, 5.7 | Validation commands, smoke tests, persistence and rollback evidence |
+| REQ ID  | Description                                           | Plan Items         | Implementation Evidence                                                  |
+| ------- | ----------------------------------------------------- | ------------------ | ------------------------------------------------------------------------ |
+| REQ-001 | Rebrand the application as OrbitERPNext               | 2.1, 3.2, 3.4, 5.7 | Branding app metadata, idempotent site settings, admin/desk verification |
+| REQ-002 | Replace the logo and favicon                          | 1.1, 2.1, 3.4, 5.7 | `public/images/` assets, configured logo fields, HTTP asset checks       |
+| REQ-003 | Provide a dark theme for the desk and public website  | 1.1, 2.1, 3.5, 5.7 | Dark CSS, Website Theme, browser contrast and flow checks                |
+| REQ-004 | Deploy the changes using the current Docker setup     | 4.3, 4.4, 4.6      | `apps.json`, custom image, Compose deployment and rollback guide         |
+| REQ-005 | Preserve behavior and verify the resulting deployment | 3.5, 4.6, 5.7      | Validation commands, smoke tests, persistence and rollback evidence      |

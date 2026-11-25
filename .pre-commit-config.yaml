@@ -69,7 +69,7 @@ repos:
         name: validate compose configurations
         description: Validate every supported Docker Compose override combination
         language: system
-        entry: python .github/scripts/validate_compose.py
+        entry: python3 .github/scripts/validate_compose.py
         pass_filenames: false
         files: >-
           (?x)^(

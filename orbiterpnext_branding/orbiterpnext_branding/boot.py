@@ -16,4 +16,3 @@ def boot_session(bootinfo):
             if app.get("name") == "erpnext":
                 app["title"] = "OrbitERPNext"
                 app["logo"] = LOGO
-

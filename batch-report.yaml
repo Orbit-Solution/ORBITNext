@@ -96,27 +96,49 @@ traceability:
   - requirement: "REQ-001"
     plan_item: "2.1"
     task: "T001,T003,T006"
-    files: ["orbiterpnext_branding/README.md","orbiterpnext_branding/orbiterpnext_branding/hooks.py","orbiterpnext_branding/orbiterpnext_branding/install.py"]
+    files:
+      [
+        "orbiterpnext_branding/README.md",
+        "orbiterpnext_branding/orbiterpnext_branding/hooks.py",
+        "orbiterpnext_branding/orbiterpnext_branding/install.py",
+      ]
     status: "completed"
   - requirement: "REQ-002"
     plan_item: "1.1,2.1,3.4"
     task: "T002,T005,T006"
-    files: ["orbiterpnext_branding/orbiterpnext_branding/public/images/orbiterpnext-logo.svg","orbiterpnext_branding/orbiterpnext_branding/public/images/orbiterpnext-favicon.svg"]
+    files:
+      [
+        "orbiterpnext_branding/orbiterpnext_branding/public/images/orbiterpnext-logo.svg",
+        "orbiterpnext_branding/orbiterpnext_branding/public/images/orbiterpnext-favicon.svg",
+      ]
     status: "completed"
   - requirement: "REQ-003"
     plan_item: "2.1,3.5"
     task: "T004,T007,T008"
-    files: ["orbiterpnext_branding/orbiterpnext_branding/public/css/orbiterpnext-dark.css","orbiterpnext_branding/orbiterpnext_branding/public/js/orbiterpnext.js"]
+    files:
+      [
+        "orbiterpnext_branding/orbiterpnext_branding/public/css/orbiterpnext-dark.css",
+        "orbiterpnext_branding/orbiterpnext_branding/public/js/orbiterpnext.js",
+      ]
     status: "completed"
   - requirement: "REQ-004"
     plan_item: "4.3,4.4"
     task: "T009,T010,T011"
-    files: ["apps.json","images/custom/Containerfile","docs/02-setup/08-orbiterpnext-branding.md"]
+    files:
+      [
+        "apps.json",
+        "images/custom/Containerfile",
+        "docs/02-setup/08-orbiterpnext-branding.md",
+      ]
     status: "completed"
   - requirement: "REQ-005"
     plan_item: "5.7"
     task: "T012,T013,T014,T015"
-    files: ["tests/test_orbiterpnext_branding.py","docs/02-setup/08-orbiterpnext-branding.md"]
+    files:
+      [
+        "tests/test_orbiterpnext_branding.py",
+        "docs/02-setup/08-orbiterpnext-branding.md",
+      ]
     status: "partial"
 protocol_violation: false
 errors: []

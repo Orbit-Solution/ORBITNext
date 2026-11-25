@@ -2,8 +2,6 @@
 
 ## Our Pledge
 
-
-
 ## Our Standards
 
 Examples of behavior that contributes to creating a positive environment

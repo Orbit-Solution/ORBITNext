@@ -15,6 +15,4 @@ web_include_js = "/assets/orbiterpnext_branding/js/orbiterpnext.js"
 extend_bootinfo = "orbiterpnext_branding.boot.boot_session"
 
 after_install = "orbiterpnext_branding.install.set_branding"
-after_migrate = [
-    "orbiterpnext_branding.install.set_branding"
-]
+after_migrate = ["orbiterpnext_branding.install.set_branding"]
