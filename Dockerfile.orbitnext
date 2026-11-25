@@ -1,0 +1,16 @@
+FROM frappe/erpnext:v16.55.0
+
+USER frappe
+
+WORKDIR /home/frappe/frappe-bench
+
+COPY --chown=frappe:frappe orbiterpnext_branding \
+    apps/orbiterpnext_branding
+
+RUN ./env/bin/pip install -e apps/orbiterpnext_branding
+
+RUN mkdir -p sites/assets && \
+    ln -sfnT \
+    /home/frappe/frappe-bench/apps/orbiterpnext_branding/orbiterpnext_branding/public \
+    sites/assets/orbiterpnext_branding
+
