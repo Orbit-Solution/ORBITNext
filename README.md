@@ -3,7 +3,6 @@
 
 ![OrbitNext ERP](https://img.shields.io/badge/OrbitNext-ERP-2563EB?style=for-the-badge)
 ![Cloud ERP](https://img.shields.io/badge/Cloud-ERP-0EA5E9?style=for-the-badge)
-![Powered by Orbit](https://img.shields.io/badge/Powered%20by-Frappe-000000?style=for-the-badge)
 ![Business Management](https://img.shields.io/badge/Business-Management-16A34A?style=for-the-badge)
 
 **Simplify Operations. Automate Workflows. Accelerate Business Growth.**
