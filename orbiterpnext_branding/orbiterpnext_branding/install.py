@@ -29,6 +29,15 @@ def set_branding():
 # ── Helpers ──────────────────────────────────────────────────────────────
 
 
+def _supported_fields(doctype, fields):
+    meta = frappe.get_meta(doctype)
+    return {
+        fieldname: value
+        for fieldname, value in fields.items()
+        if meta.has_field(fieldname)
+    }
+
+
 def _apply_website_theme():
     """Create or update the 'Orbit Dark' Website Theme."""
     try:
@@ -61,6 +70,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
             "custom_scss": custom_scss,
         }
 
+        fields = _supported_fields("Website Theme", fields)
         if not frappe.db.exists("Website Theme", THEME_NAME):
             doc = frappe.get_doc(
                 {"doctype": "Website Theme", "theme": THEME_NAME, "custom": 1, **fields}
@@ -80,7 +90,7 @@ def _apply_system_settings():
     """Rename the app in System Settings."""
     try:
         ss = frappe.get_single("System Settings")
-        ss.app_name = "OrbitERPNext"
+        ss.update(_supported_fields("System Settings", {"app_name": "OrbitERPNext"}))
         ss.save(ignore_permissions=True)
     except Exception as e:
         frappe.log_error(f"System Settings error: {e}", "OrbitERPNext Branding")
@@ -90,17 +100,20 @@ def _apply_website_settings():
     """Set logo, favicon, theme, and footer branding."""
     try:
         ws = frappe.get_single("Website Settings")
-        ws.app_name = "OrbitERPNext"
-        ws.app_logo = LOGO
-        ws.favicon = FAVICON
-        ws.splash_image = LOGO
-        ws.brand_html = BRAND_HTML
-        ws.copyright = "© Orbit Solution"
-        ws.footer_items = []  # clear default footer links if any
+        fields = {
+            "app_name": "OrbitERPNext",
+            "app_logo": LOGO,
+            "favicon": FAVICON,
+            "splash_image": LOGO,
+            "brand_html": BRAND_HTML,
+            "copyright": "© Orbit Solution",
+            "footer_items": [],
+        }
 
         if frappe.db.exists("Website Theme", THEME_NAME):
-            ws.website_theme = THEME_NAME
+            fields["website_theme"] = THEME_NAME
 
+        ws.update(_supported_fields("Website Settings", fields))
         ws.save(ignore_permissions=True)
     except Exception as e:
         frappe.log_error(f"Website Settings error: {e}", "OrbitERPNext Branding")
@@ -110,7 +123,7 @@ def _apply_navbar_settings():
     """Update navbar logo."""
     try:
         nav = frappe.get_single("Navbar Settings")
-        nav.app_logo = LOGO
+        nav.update(_supported_fields("Navbar Settings", {"app_logo": LOGO}))
         nav.save(ignore_permissions=True)
     except Exception as e:
         frappe.log_error(f"Navbar Settings error: {e}", "OrbitERPNext Branding")
