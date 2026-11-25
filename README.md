@@ -1,121 +1,190 @@
-<div align="center">
-  <img src="docs/public/frappe-docker.png" alt="Frappe Docker" width="80" />
-  <h1>Frappe Docker</h1>
-  <p>Docker images and orchestration for Frappe applications.</p>
-  <p>
-    <a href="https://github.com/frappe/frappe_docker/actions/workflows/core-build-stable.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/frappe/frappe_docker/core-build-stable.yml?branch=main&label=Build%20Stable" alt="Build Stable" />
-    </a>
-    <a href="https://github.com/frappe/frappe_docker/actions/workflows/core-build-develop.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/frappe/frappe_docker/core-build-develop.yml?branch=main&label=Build%20Develop" alt="Build Develop" />
-    </a>
-    <a href="https://frappe.github.io/frappe_docker/">
-      <img src="https://img.shields.io/badge/Docs-Open%20Site-0A7EA4" alt="Docs" />
-    </a>
-  </p>
-</div>
 
-## What is this?
+# OrbitNext ERP – Smart Cloud ERP & Business Management Software
 
-This repository is the official container setup for Frappe applications.
+![OrbitNext ERP](https://img.shields.io/badge/OrbitNext-ERP-2563EB?style=for-the-badge)
+![Cloud ERP](https://img.shields.io/badge/Cloud-ERP-0EA5E9?style=for-the-badge)
+![Powered by Frappe](https://img.shields.io/badge/Powered%20by-Frappe-000000?style=for-the-badge)
+![Business Management](https://img.shields.io/badge/Business-Management-16A34A?style=for-the-badge)
 
-It provides Docker images, Compose configurations, and documentation for running Frappe applications, including ERPNext, CRM, Helpdesk, and other Frappe apps, in containers.
+**Simplify Operations. Automate Workflows. Accelerate Business Growth.**
 
-Use it if you want to:
+OrbitNext ERP is a modern, cloud-based Enterprise Resource Planning (ERP) solution by **Orbit Solution**, designed to help businesses streamline operations, automate workflows, manage resources and make data-driven decisions through a centralized platform.
 
-- run ERPNext, CRM, Helpdesk, or other Frappe apps with Docker
-- start from a quick demo setup
-- use production-ready Docker images and Compose setups
-- build custom app images
-- deploy and operate Frappe in production
+Built on the Frappe and ERPNext ecosystem, OrbitNext ERP brings essential business management tools together in one integrated system for startups, small and medium-sized businesses, and growing enterprises.
 
-## Repository Structure
+## Official Links
 
-```bash
-frappe_docker/
-├── docs/                 # Complete documentation
-├── overrides/            # Docker Compose configurations for different scenarios
-├── compose.yaml          # Base Compose File for production setups
-├── pwd.yml               # Single Compose File for quick disposable demo
-├── images/               # Dockerfiles for building Frappe images
-├── development/          # Development environment configurations
-├── devcontainer-example/ # VS Code devcontainer setup
-└── resources/            # Helper scripts and configuration templates
-```
+- **Access OrbitNext ERP:** https://erp.orbitsolution.site/
+- **Official Website:** https://www.orbitsolution.site/
+- **Organization:** https://github.com/Orbit-Solution
 
-> This section describes the structure of **this repository**, not the Frappe framework itself.
+---
 
-### Key Components
+## What is OrbitNext ERP?
 
-- `docs/` - Canonical documentation for all deployment and operational workflows
-- `overrides/` - Opinionated Compose overrides for common deployment patterns
-- `compose.yaml` - Base compose file for production setups (production)
-- `pwd.yml` - Disposable demo environment (non-production)
+OrbitNext ERP is an integrated business management platform designed to simplify complex business processes and improve operational efficiency.
 
-## Documentation
+From financial management and inventory tracking to human resources, customer relationship management and business reporting, OrbitNext ERP provides a scalable foundation for digital business transformation.
 
-The full `frappe_docker` documentation is available in [`docs/`](docs/) and published at [frappe.github.io/frappe_docker](https://frappe.github.io/frappe_docker/).
+## Key Features
 
-Documentation is gradually being organized into [Tutorials](docs/10-tutorials/index.md), [How-to Guides](docs/11-how-to/index.md), [Reference](docs/12-reference/index.md), and [Explanation](docs/13-explanation/index.md). The category indexes explain each category's purpose. To help, see the [documentation contribution guide](docs/11-how-to/01-contribute-documentation.md).
+### Accounting & Financial Management
 
-### Recommended entry points:
+- General ledger and financial reporting
+- Accounts payable and receivable
+- Sales and purchase invoicing
+- Expense management
+- Budgeting and financial analytics
 
-- **New here:** [Getting Started Guide](docs/getting-started.md)
-- **Choosing a setup:** [Deployment methods](docs/01-getting-started/01-choosing-a-deployment-method.md)
-- **ARM64 notes:** [ARM64](docs/01-getting-started/03-arm64.md)
-- **Container setup overview:** [Container Setup Overview](docs/02-setup/01-overview.md)
-- **Running in production:** [Deployment how-to guides](docs/11-how-to/)
-- **Operating a deployment:** [Operations docs](docs/04-operations/)
-- **Development workflows:** [Development](docs/05-development/01-development.md)
-- **FAQ:** [Frequently Asked Questions](https://github.com/frappe/frappe_docker/wiki/Frequently-Asked-Questions)
+### Inventory & Warehouse Management
 
-## Prerequisites
+- Inventory tracking
+- Stock level management
+- Multiple warehouse management
+- Stock transfers and adjustments
+- Inventory valuation
 
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose v2](https://docs.docker.com/compose/)
-- [git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
+### Sales & Customer Relationship Management
 
-> For Docker basics and best practices refer to Docker's [documentation](http://docs.docker.com)
+- Customer and lead management
+- Sales quotations and orders
+- Sales pipeline management
+- Customer relationship management (CRM)
+- Sales performance reporting
 
-## Demo setup
+### Human Resource Management
 
-The fastest way to try Frappe locally is with the single-file demo setup in `pwd.yml`.
+- Employee management
+- Attendance and leave management
+- Payroll management
+- Employee records
+- HR workflows
 
-### Try on your environment
+### Procurement & Supplier Management
 
-> **⚠️ Disposable demo only**
->
-> **This setup is intended for short-lived evaluation only.** You will not be able to install custom apps to this setup. For production deployments, custom configurations, and detailed explanations, see the full documentation.
+- Supplier management
+- Purchase orders
+- Material requests
+- Procurement workflows
+- Purchase analytics
 
-First clone the repo:
+### Project & Task Management
 
-```sh
-git clone https://github.com/frappe/frappe_docker
-cd frappe_docker
-```
+- Project planning
+- Task assignment and tracking
+- Timesheet management
+- Project cost monitoring
+- Team collaboration
 
-Then run:
+### Business Intelligence & Reporting
 
-```sh
-docker compose -f pwd.yml up -d
-```
+- Interactive dashboards
+- Business performance insights
+- Custom reports
+- Financial analytics
+- Data-driven decision-making
 
-Wait for a couple of minutes for ERPNext site to be created or check `create-site` container logs before opening browser on port `8080`. (username: `Administrator`, password: `admin`)
+## Why Choose OrbitNext ERP?
 
-## Contributing
+- **Centralized Platform:** Manage essential business operations from a single system.
+- **Cloud-Based Accessibility:** Access your ERP through a web browser.
+- **Scalable Architecture:** Support evolving business requirements.
+- **Business Automation:** Reduce repetitive manual processes.
+- **Customizable Workflows:** Adapt business processes to organizational needs.
+- **Role-Based Access:** Manage user permissions and access controls.
+- **Integrated Reporting:** Improve visibility across business departments.
+- **Modern Technology:** Built on the Frappe and ERPNext ecosystem.
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## Technology Stack
 
-See the [repository versioning policy](docs/12-reference/01-repository-versioning-policy.md) for release classification, compatibility boundaries, and build-tool minimum changes.
+| Technology | Purpose |
+|------------|---------|
+| Frappe Framework | Application Framework |
+| ERPNext | Enterprise Resource Planning |
+| Python | Backend Development |
+| JavaScript | Frontend Development |
+| MariaDB | Database Management |
+| Redis | Caching and Background Jobs |
+| Docker | Containerized Deployment |
+| Nginx | Web Server and Reverse Proxy |
+| AWS | Cloud Infrastructure |
 
-This repository is only for container related stuff. You also might want to contribute to:
+## Industries We Serve
 
-## Resources
+OrbitNext ERP is designed to support businesses across multiple industries:
 
-- [Frappe framework](https://github.com/frappe/frappe),
-- [ERPNext](https://github.com/frappe/erpnext),
-- [Frappe Bench](https://github.com/frappe/bench).
+- Retail and Wholesale
+- Manufacturing
+- Information Technology
+- Professional Services
+- Distribution and Logistics
+- E-commerce
+- Trading Companies
+- Small and Medium Enterprises
+- Startups and Growing Businesses
 
-## License
+## ERP Software for Sri Lanka, Australia and Global Businesses
 
-This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+OrbitNext ERP aims to help businesses in Sri Lanka, Australia and international markets embrace digital transformation through integrated enterprise resource planning, business automation and cloud-based management solutions.
+
+Whether you are managing a small business or scaling an enterprise, OrbitNext ERP provides a flexible foundation for managing your operations.
+
+## Getting Started
+
+Access the OrbitNext ERP platform:
+
+https://erp.orbitsolution.site/
+
+For business inquiries, ERP implementation, customization and technology solutions, visit our official website:
+
+https://www.orbitsolution.site/
+
+## About Orbit Solution
+
+Orbit Solution is a technology solutions provider focused on software development, web development, business automation, AI-powered solutions and digital transformation.
+
+Our goal is to help businesses improve efficiency and achieve sustainable growth through modern technology.
+
+## Search Keywords
+
+- OrbitNext ERP
+- Orbit Solution ERP
+- ERP Software Sri Lanka
+- ERP Software Australia
+- Cloud ERP Software
+- Enterprise Resource Planning Software
+- Business Management Software
+- ERP for Small Businesses
+- Accounting and Inventory Software
+- Cloud-Based Accounting Software
+- Human Resource Management Software
+- Business Automation Solutions
+- ERPNext Solutions
+- Frappe ERP Solutions
+- Digital Transformation Solutions
+- Integrated Business Management System
+
+## License & Attribution
+
+OrbitNext ERP is built on the Frappe and ERPNext ecosystem.
+
+Third-party software and components remain subject to their respective open-source licenses.
+
+- Frappe Framework: https://github.com/frappe/frappe
+- ERPNext: https://github.com/frappe/erpnext
+
+---
+
+## Connect With Us
+
+**Orbit Solution**
+
+Website: https://www.orbitsolution.site/
+
+ERP Platform: https://erp.orbitsolution.site/
+
+GitHub: https://github.com/Orbit-Solution
+
+---
+
+**OrbitNext ERP – Empowering Businesses Through Intelligent Enterprise Solutions.**
